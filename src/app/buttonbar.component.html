@@ -1,0 +1,13 @@
+<h1>
+  Button Bar Below
+  </h1>
+  <div class="col-md-12 mt-2">
+  <input class="ml-3 mr-2" type="text" [(ngModel)]="btnGrp.title" name="" placeholder="Button Name">
+  <button class="ml-3" type="button" class="btn btn-primary btn-space marginTop" (click)="add(btnGrp.title)">Add</button>
+  </div>
+<div *ngIf="btnGrp" class="col-md-12 mt-2" style="display: inline-flex;">
+    <div class="ml-3" *ngFor="let btn of btnGrp">
+      <button class="btn btn-secondary " (click)="getBtnDetails(btn.title)">{{ btn.title }}</button>
+    </div>
+  </div>
+  
